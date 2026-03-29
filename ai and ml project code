@@ -1,0 +1,27 @@
+def train_model(data, labels, rate=0.0001, cycles=10000):
+    print("--- Brain Initialized: Starting Training ---")
+    
+    num_vars = len(data[0])
+    weights = [0.0] * num_vars
+    bias = 0.0
+    
+    for cycle in range(cycles):
+        for i in range(len(data)):
+            # Calculate current prediction
+            prediction = bias
+            for j in range(num_vars):
+                prediction += weights[j] * data[i][j]
+            
+            # Calculate the gap between reality and prediction
+            error = labels[i] - prediction
+            
+            # Update the 'brain' (Gradient Descent)
+            bias += rate * error
+            for j in range(num_vars):
+                weights[j] += rate * error * data[i][j]
+                
+        if cycle % 2000 == 0:
+            print(f"Cycle {cycle}: Learning patterns and reducing error...")
+
+    print("Training Complete. Model is now ready for use.")
+    return weights, bias
