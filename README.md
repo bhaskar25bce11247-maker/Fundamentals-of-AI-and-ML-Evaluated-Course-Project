@@ -27,6 +27,10 @@ Human-Readable: I wrote the code to be clean and easy to follow, with print stat
 Why I Built This
 I wanted to prove that I understand Gradient Descent and Weight Optimization. It’s easy to call a function, but building the engine from scratch taught me why things like "learning rates" matter (and how they can break the model if they're too high!).
 
+The output for the code is:
+<img width="409" height="249" alt="Screenshot 2026-03-29 231332" src="https://github.com/user-attachments/assets/599b12da-f07c-4f0c-b8b5-39dc4e50d259" />
+
+
 How to Run
 Make sure you have Python installed.
 
@@ -38,6 +42,5 @@ Future Goals
 Add a simple web interface using Streamlit.
 
 Add a feature to calculate the "Impact Factor" (showing which habit helps your grade the most).
-
 
 
